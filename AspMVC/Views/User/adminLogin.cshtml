@@ -1,0 +1,26 @@
+﻿@using Blog.Models
+@model Admin
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h4>Admin Login</h4>
+
+<form method="post" action="/User/AdminValidate">
+
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label class="form-label" asp-for="userName"></label><br>
+        <input class="form-control" asp-for="userName"><br>
+        <span asp-validation-for="userName"></span>
+    </div>
+    <div>
+        <label class="form-label" class="form-label" asp-for="pass"></label><br>
+        <input class="form-control" asp-for="pass"><br>
+        <span asp-validation-for="pass"></span>
+    </div>
+
+    <input class="btn btn-dark" type="submit" value="login" />
+
+</form>

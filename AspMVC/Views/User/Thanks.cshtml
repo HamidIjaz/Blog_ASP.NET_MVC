@@ -1,0 +1,15 @@
+﻿@model Blog.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="text-center">
+    <p>you entered following details</p>
+
+    <p>Name: @Model.Name</p>
+    <p>Age: @Model.Age</p>
+
+    Click <a asp-action="ListUsers">here</a> to view all students
+
+</div>
